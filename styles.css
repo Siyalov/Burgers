@@ -323,5 +323,12 @@ form button:hover{
     .container{ 
         justify-content: center;
     }
+    .banner__left, .banner__right  {
+        flex-direction: column;
+    }
+    footer {
+       
+        flex-wrap: wrap;
+    } 
 }
 
