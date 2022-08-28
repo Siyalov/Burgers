@@ -28,11 +28,12 @@
                </p>
             <form action="/" method="get">  
                
-               <div class="form_block d-f">
-                  <input type="text" required placeholder="Ваше имя">
-                  <input type="text" required placeholder="+7 ( _ _ _) _ _ - _ _ - _ _">                  
-                  <button type="submit">
-                     Позвоните мне
+               <div class="form_block d-f"> 
+                  <input type="text" required placeholder="Ваше имя" id="name" name="name">
+                  <input type="text" required placeholder="+7 ( _ _ _) _ _ - _ _ - _ _" id="phone" name="phone">                  
+                  <button type="submit" class="submit"> 
+                     Позвоните мне 
+                     
                      <img src="image/arrow2.svg" alt="arrow2">                     
                   </button>                  
                   <div class="d-f form_politic">
@@ -53,8 +54,9 @@
          <div class="text">
             <h1>  
                <span>работаем с 11:00 до 22:00 </span>  
-               Лучшие бургеры
+               Лучшие бургеры  
             </h1>
+            
             <p class="text-descr"> Закажи наши фирменные бургеры или собери что-то свое, а&nbsp;наши курьеры доставят за&nbsp;30&nbsp;минут</p>
                <div class="btn">заказать</div>
          </div>
@@ -94,10 +96,7 @@
                
          </div>
       </div>   
-   </div>
-   
-     
-
+   </div>     
     <footer class="site__footer">
       <ul class="footer__menu container">
          <li class="footer__logo-item">
