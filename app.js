@@ -3,8 +3,6 @@ const modal = document.getElementById('modal');
 const close = document.getElementById('close_btn');
 const form = document.querySelector("form"); 
 
-
-
 btns.forEach( btn => {
    btn.addEventListener('click', function() {
       modal.classList.add('modal_opened')        
@@ -12,17 +10,17 @@ btns.forEach( btn => {
 })
 
 close.addEventListener('click', function() {
-   modal.classList.remove('modal_opened') 
+   modal.classList.remove('modal_opened')
+   form.classList.remove("hidden") 
+   document.querySelector('.success_content').classList.add("hidden") 
+   document.querySelector(".modal_content").classList.remove("hidden")
 })
 
 form.addEventListener('submit', async function(evt)  {
 
    evt.preventDefault()   
 
-   // const formData = new FormData()
-   // formData.append('name', document.querySelector('#name').value)
-   // formData.append('phone', document.querySelector('#phone').value)
-
+  
 console.log(new FormData(evt.target))
 
    await fetch('/server.php', {
@@ -31,20 +29,14 @@ console.log(new FormData(evt.target))
     }).then(value => {
       return value.json()
     }).then(value => { 
-      alert(`Заказ принят на имя: ${value.name}`)
-    }); 
+      
+      form.classList.add("hidden")
+      document.querySelector('.success_content').classList.remove("hidden") 
+      document.querySelector(".modal_content").classList.add("hidden")
+      document.getElementById("success_description").innerText = ` ${value.name}, с вами свяжутся в течение 9 минут.`  
+      
+   }); 
 
-
-
-   // let result = await response.json();
-
-   //    console.log(result.res)
-   //    alert("Успешно отправлено!!!")
-   //    if(result.res == 'falid'){
-         
-   //       document.querySelector('modal_content h2');
-   //       h2.textContant = 'Попробуйте еще раз'
-   // }
 })
 
 

@@ -18,10 +18,10 @@
          </div>
          <div class="modal_content">
             <h2> 
-               Оставить заявку
+               Оставить заявку.
             </h2>
                <p class="modal_description"> 
-                  Введите номер, и наш оператор позвонит вам в течение 10 минут в рабочее время
+                  Введите номер, и наш оператор позвонит вам в течение 10 минут в рабочее время.
                </p>
                <p class="modal_worktime">
                   работаем с 11:00 до 22:00
@@ -46,8 +46,19 @@
                </div>
             </form>
          </div>      
+         <div class="modal_content success_content hidden">
+            <h2> 
+               УСПЕШНО!!!
+            </h2>
+               <p class="modal_description" id="success_description"> 
+                  
+               </p>
+               <p class="modal_worktime">
+                  Спасибо Вам!
+               </p>            
+         </div>    
       </div>
-   </div>
+   </div>  
 
    <div class="main">
       <div class="container">   

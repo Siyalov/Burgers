@@ -243,6 +243,10 @@ p {
     text-align: center;
     margin-top: 24px; 
  }
+
+.hidden{
+    display: none;
+}
  
  .form_block {
     display: flex;
